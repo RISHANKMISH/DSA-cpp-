@@ -43,3 +43,16 @@ using namespace std;
 
 
 // Q3)
+
+
+void OnetoN_Print(int n){
+    if (n==0) return ;
+    OnetoN_Print(n-1);
+    cout << n << "";
+}
+
+int main(){
+    int n;
+    cin>> n; 
+    OnetoN_Print(n); 
+}

@@ -45,14 +45,31 @@ using namespace std;
 // Q3)
 
 
-void OnetoN_Print(int n){
-    if (n==0) return ;
-    OnetoN_Print(n-1);
-    cout << n << "";
+// void OnetoN_Print(int n){
+//     if (n==0) return ;
+//     OnetoN_Print(n-1);
+//     cout << n << "";
+// }
+
+// int main(){
+//     int n;
+//     cin>> n; 
+//     OnetoN_Print(n); 
+// }
+
+
+void OnetoN_Print(int n, int i= 1){
+    if (i>n) return;
+    cout << i<< " \n";
+
+
+    OnetoN_Print(n, i+1);
 }
+
 
 int main(){
     int n;
+    cout<< "Enter the value of n: ";
     cin>> n; 
     OnetoN_Print(n); 
 }
